@@ -9,9 +9,10 @@
 void main(int argc, char *argv[])
 {
 
-    printf ("booting up...\n");
+    printf("booting up...\n");
 
-    printf ("enter command\nfor list of commands enter 'help'\n");
+    printf("enter command\n");
+    printf("add = adds of two numbers\nsub = subtracts the second number from the first\nmul = multiplies two numbers together\ndiv = divides the first number by the second\npow = raise the first number to the power of the second\nroot = finds the power of the second number to equal the first\n");
 
     while (1)
     {
@@ -40,12 +41,7 @@ void main(int argc, char *argv[])
             i++;
             token = strtok(NULL, delim);
         }
-
-        if(strcmp(opr , "help")==0)
-        {
-            printf("add = adds of two numbers\nsub = subtracts the second number from the first\nmul = multiplies two numbers together\ndiv = divides the first number by the second\npow = raise the first number to the power of the second\n");
-        }
-        else if(strcmp(opr , "add")==0)
+        if(strcmp(opr , "add")==0)
         {
             float a;
             a = atoi(arg1) + atoi(arg2);
@@ -61,7 +57,7 @@ void main(int argc, char *argv[])
         {
             float a;
             a = (float) atoi(arg1)/atoi(arg2);
-            printf("%.2f\n", a);
+            printf("%f\n", a);
         }
         else if(strcmp(opr , "mul")==0)
         {
@@ -72,10 +68,19 @@ void main(int argc, char *argv[])
         else if(strcmp(opr , "pow")==0)
         {
             float a;
-        
-            printf("%d, %d \n", (int) atoi(arg1), (int) atoi(arg2));
             a = pow(atoi(arg1), atoi(arg2));
             printf("%f\n", a);
         }
+        else if(strcmp(opr , "root")==0)
+        {
+            float a;
+            a = round(pow(atoi(arg1), 1./atoi(arg2)));
+            printf("%f\n", a);
+        }
+        else
+        {
+            printf("invalid command\n");
+        }
+        
     }
 }
