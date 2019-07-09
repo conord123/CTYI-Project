@@ -74,7 +74,7 @@ void main(int argc, char *argv[])
         else if(strcmp(opr , "root")==0)
         {
             float a;
-            a = round(pow(atoi(arg1), 1./atoi(arg2)));
+            a = pow(atoi(arg1), 1./atoi(arg2));
             printf("%f\n", a);
         }
         else
