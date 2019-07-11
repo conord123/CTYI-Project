@@ -1,6 +1,6 @@
 import numpy as np
 import os
-os.system('cls') 
+os.system('clear') 
 # making grid of ~
 grid = np.chararray((21,10))
 grid[:] = "~"
@@ -15,10 +15,8 @@ line6 = grid[(grid > 50) & (grid < 59)]
 line7 = grid[(grid > 60) & (grid < 69)]
 line8 = grid[(grid > 70) & (grid < 79)]
 line9 = grid[(grid > 80) & (grid < 89)]
-line10 = grid[(grid > 90) & (grid < 99)]'''
-line11 = grid[10]
-grid[10] = '#'
-'''
+line10 = grid[(grid > 90) & (grid < 99)]
+line11 = grid[(grid > 100) & (grid < 110)]
 line12 = grid[(grid > 110) & (grid < 119)]
 line13 = grid[(grid > 120) & (grid < 129)]
 line14 = grid[(grid > 130) & (grid < 139)]
@@ -40,86 +38,87 @@ if(playchoice == 'y'):
         line2 = '#'
         os.system('clear')
         print(grid)
-        print "\nscore: " + str(score)
+        print "\nscore: " 
+        print str(score)
         #making the pieces in their various forms
         zeroturn = "#### \n\n #  \n###\n\n#  \n###\n\n  #\n###\n\n##\n##\n\n # \n###\n\n## \n ##\n\n ##\n##\n"
         firstturn = "#\n#\n#\n#\n\n##\n#\n#\n\n#\n#\n##\n\n##\n##\n\n#\n##\n#\n\n #\n##\n#\n\n#\n##\n #\n"
         secondturn = "####\n\n###\n  #\n\n###\n#\n\n##\n##\n\n###\n # \n\n## \n ##\n\n ##\n##\n"
         thirdturn = "#\n#\n#\n#\n\n #\n #\n##\n\n##\n #\n #\n\n##\n##\n\n #\n##\n #\n\n #\n##\n#\n\n#\n##\n #\n"
-        print "no turn\n\n" + zeroturn
-        print "first turrn\n\n" + firstturn
-        print "second turn\n\n" + secondturn
-        print "third turn\n\n" + thirdturn
+        #print "no turn\n\n" + zeroturn
+        #print "first turrn\n\n" + firstturn
+        #print "second turn\n\n" + secondturn
+        #print "third turn\n\n" + thirdturn
+        grid[1] = '#'
+        grid[2] = '#'
         #the game working maybe
-        while(score > 1):
-            time.sleep(5)
-            score = score -1
-            while (gameover == 0):
-                if (line1 == '#'):
-                    print("better luck next time \n your score: " + score)
-                    gameover = 1
-
-                if (line2 == '#'):
-                    score = score + 100
-                    line2 = 0
-                elif (line3 == '#'):
-                    score = score + 100
-                    line3 = 0
-                elif (line4 == '#'):
-                    score = score + 100
-                    line4 = 0
-                elif (line5 == '#'):
-                    score = score + 100
-                    line5 = 0
-                elif (line6 == '#'):
-                    score = score + 100
-                    line6 = 0
-                elif (line7 == '#'):
-                    score = score + 100
-                    line7 = 0
-                elif (line8 == '#'):
-                    score = score + 100
-                    line8 = 0
-                elif (line9 == '#'):
-                    score = score + 100
-                    line9 = 0
-                elif (grid[10] == '#'):
-                    score = score + 100
-                    grid[10] = 0
-                elif (line11 == '#'):
-                    score = score + 100
-                    line11 = 0
-                elif (line12 == '#'):
-                    score = score + 100
-                    line12 = 0
-                elif (line13 == '#'):
-                    score = score + 100
-                    line13 = 0
-                elif (line14 == '#'):
-                    score = score + 100
-                    line14 = 0
-                elif (line15 == '#'):
-                    score = score + 100
-                    line15 = 0
-                elif (line16 == '#'):
-                    score = score + 100
-                    line16 = 0
-                elif (line17 == '#'):
-                    score = score + 100
-                    line17 = 0
-                elif (line18 == '#'):
-                    score = score + 100
-                    line18 = 0
-                elif (line19 == '#'):
-                    score = score + 100
-                    line19 = 0
-                elif (line20 == '#'):
-                    score = score + 100
-                    line20 = 0
-                elif (line21 == '#'):
-                    score = score + 100
-                    line21 = 0
-                gameover = 1
+        print(grid)
+        if (grid[0] is '#'):
+            print("better luck next time \n your score: " + score)
+            #gameover = 1
+        elif (grid[1] is '#'):
+            score = score + 100
+            #grid[1] = '~'
+        elif (grid[2] == '#'):
+            score = score + 100
+            grid[2] = '~'
+        elif (grid[3] is '#'):
+            score = score + 100
+            grid[3] = '~'
+        elif (grid[4] is '#'):
+            score = score + 100
+            grid[4] = '~'
+        elif (grid[5] is '#'):
+            score = score + 100
+            grid[5] = '~'
+        elif (grid[6] is '#'):
+            score = score + 100
+            grid[6] = '~'
+        elif (grid[7] is '#'):
+            score = score + 100
+            grid[7] = '~'
+        elif (grid[8] is '#'):
+            score = score + 100
+            grid[8] = '~'
+        elif (grid[9] is '#'):
+            score = score + 100
+            grid[9] = '~'
+        elif (grid[10] is '#'):
+            score = score + 100
+            grid[10] = '~'
+        elif (grid[11] is '#'):
+            score = score + 100
+            grid[11] = '~'
+        elif (grid[12] is '#'):
+            score = score + 100
+            grid[12] = '~'
+        elif (grid[13] is '#'):
+            score = score + 100
+            grid[13] = '~'
+        elif (grid[14] is '#'):
+            score = score + 100
+            grid[14] = '~'
+        elif (grid[15] is '#'):
+            score = score + 100
+            grid[15] = '~'
+        elif (grid[16] is '#'):
+            score = score + 100
+            grid[16] = '~'
+        elif (grid[17] is '#'):
+            score = score + 100
+            grid[17] = '~'
+        elif (grid[18] is '#'):
+            score = score + 100
+            grid[18] = '~'
+        elif (grid[19] is '#'):
+            score = score + 100
+            grid[19] = '~'
+        elif (grid[20] is '#'):
+            score = score + 100
+            grid[20] = '~'
+        print "\n\n"
+        print(grid)
+        gameover = 1
         # the game stopping (actually works dont edit)
         if(playchoice == 'n'):
             print "come back soon"
